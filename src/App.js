@@ -525,3 +525,4 @@ function EntirePage() {
 }
 
 export default EntirePage
+ReactDOM.render(<EntirePage />, document.getElementById('root'))

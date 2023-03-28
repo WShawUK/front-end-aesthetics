@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/front-end-aesthetics/static/css/main.f3200a02.css",
-    "main.js": "/front-end-aesthetics/static/js/main.d62fb262.js",
+    "main.css": "/front-end-aesthetics/static/css/main.0d5ed3ef.css",
+    "main.js": "/front-end-aesthetics/static/js/main.942f72be.js",
     "static/js/787.3c9f48d8.chunk.js": "/front-end-aesthetics/static/js/787.3c9f48d8.chunk.js",
     "static/media/1.jpg": "/front-end-aesthetics/static/media/1.a9390f9beb516d0ee8fa.jpg",
     "static/media/10.jpg": "/front-end-aesthetics/static/media/10.57fbb3d816d30968b3e9.jpg",
@@ -19,12 +19,12 @@
     "index.html": "/front-end-aesthetics/index.html",
     "static/media/arrow-undo-outline.svg": "/front-end-aesthetics/static/media/arrow-undo-outline.9cdfb39c4c2f51d5d31a.svg",
     "static/media/arrow-redo-outline.svg": "/front-end-aesthetics/static/media/arrow-redo-outline.b823d21278613bcd679db7ec6d8784c8.svg",
-    "main.f3200a02.css.map": "/front-end-aesthetics/static/css/main.f3200a02.css.map",
-    "main.d62fb262.js.map": "/front-end-aesthetics/static/js/main.d62fb262.js.map",
+    "main.0d5ed3ef.css.map": "/front-end-aesthetics/static/css/main.0d5ed3ef.css.map",
+    "main.942f72be.js.map": "/front-end-aesthetics/static/js/main.942f72be.js.map",
     "787.3c9f48d8.chunk.js.map": "/front-end-aesthetics/static/js/787.3c9f48d8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3200a02.css",
-    "static/js/main.d62fb262.js"
+    "static/css/main.0d5ed3ef.css",
+    "static/js/main.942f72be.js"
   ]
 }

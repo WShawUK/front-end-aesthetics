@@ -186,6 +186,8 @@ header div h1 {
   margin: 10px auto;
   padding: 10px;
   border: 1px solid black;
+
+  max-height: 90px;
 }
 
 .expandable-div h1{
@@ -1015,3 +1017,328 @@ pointer-events: all;
 
 
 
+
+
+
+
+
+
+
+
+
+#addable-stuff-div {
+  position: relative;
+  width: 50%;
+  height: 80vh;
+  z-index: 1;
+  
+  border: 1px solid var(--colour-4);
+  margin: 20px auto;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  #addable-stuff-div {
+    width: 90%;
+  }
+  
+}
+
+
+#addable-stuff-div >:nth-child(1){
+  position: sticky;
+
+  top: 0;
+  z-index: 2;
+
+  width: 100%;
+
+  display: flex;
+  border: 1px red solid;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: var(--colour-2);
+
+  /* overflow-x: hidden; */
+
+}
+
+#addable-stuff-div >:nth-child(1) input{
+  all: unset;
+
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 4px;
+}
+
+#addable-stuff-div >:nth-child(1) input:focus{
+  box-shadow: inset 0 0 5px 1px rgb(255 255 255 / 0.4);
+}
+
+#addable-stuff-div >:nth-child(1) button{
+  position: relative;
+  aspect-ratio: 1;
+  height: 130%;
+  color: black;
+  background-color: var(--colour-5);
+  align-self: center;
+
+  border: outset 1px grey;
+  margin: 1px 20px 1px auto;
+}
+
+#addable-stuff-div >:nth-child(1) button svg{
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#addable-stuff-div >:nth-child(1) button:active{
+  position: relative;
+  bottom: 1px;
+  right: 1px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.thing-to-add {
+  --color-of-thing: DodgerBlue;
+
+  position: relative;
+  align-self: center;
+  margin: 10px 0;
+
+  width: 70%;
+  height: 40px;
+  z-index: 1;
+
+  /* border: 1px solid green; */
+
+  display: grid;
+  grid-template-columns: auto 20px;
+
+  transition: 0.5s;
+
+  overflow: visible;
+}
+
+@media screen and (max-width: 450px) {
+  .thing-to-add {
+    width: 60%;
+  }
+  
+}
+
+.thing-to-add-fade-in {
+  animation: thing-to-add-fade-in 0.5s;
+}
+
+@keyframes thing-to-add-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.thing-to-add >:nth-child(1){
+  /* --color-of-thing: blue; */
+
+  box-shadow: -3px 7px 0px 2px #15162b;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--color-of-thing);
+  border-radius: 20px 0px 0px 20px;
+
+  transition: background-color 1s;
+}
+
+.thing-to-add input{
+  all: unset;
+
+  border: 1px black solid;
+  padding-left: 5px;
+  color: black;
+  background-color: var(--color-of-thing);
+  margin: 9px 10px;
+  width: 80%;
+
+  border-radius: 5px;
+  transition: background-color 1s;
+}
+
+.thing-to-add input:focus{
+  box-shadow: inset 0 0 5px 1px rgb(255 255 255 / 0.7);
+}
+
+.thing-to-add >:nth-child(1):hover +:nth-child(2){
+  transform: translateX(0px);
+}
+
+.thing-to-add>:nth-child(2):hover {
+  transform: translateX(0px);
+}
+
+
+
+.thing-to-add>:nth-child(2) {
+  position: relative;
+  background-color: var(--color-of-thing);
+
+  height: 40px;
+  width: 20px;
+  transform: translateX(-20px);
+  z-index: -1;
+  box-shadow: -3px 7px 0px 2px #15162b;
+  
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+  transition: 0.2s;
+  overflow: visible;
+}
+
+.thing-to-add button {
+  all: unset;
+
+  background-color: red;
+  grid-row: 1/2;
+  
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 90%;
+
+  transition: 0.3s;
+}
+
+.thing-to-add button svg{
+  width: 100%;
+}
+
+.thing-to-add button:hover {
+  background-color: rgb(187, 30, 30);
+}
+
+.thing-to-add button:focus {
+  background-color: rgb(50 0 0);
+}
+
+
+
+
+.thing-to-add .pallet-div {
+  display: grid;
+  grid-template-columns: 20px 20px 20px 20px;
+  grid-template-rows: 20px 20px 20px 20px;
+  overflow: hidden;
+
+  background-color: var(--color-of-thing);
+
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  
+  transition: 0.1s, background-color 1s;
+}
+
+.thing-to-add .pallet-div svg{
+  width: 20px;
+}
+
+.thing-to-add .pallet-div:hover {
+  width: 80px;
+  height: 80px;
+}
+
+.thing-to-add .pallet-div .pallet-option {
+  width: 20px;
+  height: 20px;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(1){
+  background-color: red;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(2){
+  background-color: orange;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(3){
+  background-color: yellow;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(4){
+  background-color: green;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(5){
+  background-color: blue;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(6){
+  background-color: indigo;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(7){
+  background-color: dodgerblue;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(8){
+  background-color: purple;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(9){
+  background-color: deeppink;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(10){
+  background-color: silver;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(11){
+  background-color: gold;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(12){
+  background-color: seagreen;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(13){
+  background-color: brown;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(14){
+  background-color: grey;
+}
+
+.thing-to-add .pallet-div .pallet-option:nth-of-type(15){
+  background-color: white;
+}
